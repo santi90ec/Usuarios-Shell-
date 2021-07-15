@@ -1,0 +1,22 @@
+Usuarios.objects.create(first_name = "Santiago" , last_name = "Atapuma" , email_address = "andre@hotmail.com", age = 30, created_at = "2021-07-14" , updated_at = "2021-07-14")
+Usuarios.objects.create(first_name = "Andres" , last_name = "Atapuma" , email_address = "santiago@hotmail.com", age = 36, created_at = "2021-07-14" , updated_at = "2021-07-14")
+Usuarios.objects.create(first_name = "Juan" , last_name = "Atapuma" , email_address = "juan@hotmail.com", age = 39, created_at = "2021-07-14" , updated_at = "2021-07-14")
+
+Usuarios.objects.all()
+
+Usuarios.objects.last().__dict__
+
+Usuarios.objects.first().__dict__
+
+c=Usuarios.objects.get(id=3)
+c.last_name="Pancakes"
+c.save()
+Usuarios.objects.get(id=3).__dict__
+
+ d=Usuarios.objects.get(id=2)
+ d.delete()
+(1, {'users_app.Usuarios': 1})
+
+
+Usuarios.objects.all().order_by("-first_name")
+<QuerySet [<Usuarios: Usuarios object (1)>, <Usuarios: Usuarios object (3)>]>
